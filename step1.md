@@ -29,7 +29,7 @@ We'll start with creating an empty site, add a page that will be accessible to s
     ![page-settings](assets/page_settings.png "page settings")
     ![members-only](assets/memebrs_only.png)
 
-4. Drag the "site menu" component to the left and configure it to show all pages
+4. Add the "site menu" component (via + icon, "Quick Add", "Menu"), drag it to the appear section of the site - the header, and configure it to show all pages
 
 ![manage-menu](assets/manage-menu.png)
 ![all site pages](assets/all_site_pages.png)
@@ -80,22 +80,22 @@ We'll start with creating an empty site, add a page that will be accessible to s
 
 9. Add new service
 
-   * We'll add new services using a lightbox. First let's drag a new lightbox to the stage. Make sure to remove the default lightbox settings of displaying it automatically on every page.
+   * We'll add new services using a lightbox. First let's drag a new lightbox to the stage. Make sure to remove the default lightbox settings of displaying it automatically on every page. (you might to minimize the code editor)
 
    ![light box](assets/lightbox.png)
-
+   ![minimize dev mode](assets/minimize_dev_mode.png)
    
    ![light box hide on show](assets/lightbox-hide-on-show.png)
 
    * Add a **new dataset** into the lightbox. You can think of a dataset as a UI connector to a database. You can have multiple dataset connected to the same database. This dataset will be used to add new services. Set the dataset permissions to "Write only".
    * Delete the UI that comes with the preset and add a `Text Input` and a `Button`. Your light box should look similar to this one:
    ![new service modal](assets/new_service_modal.png)
-   * Bind the Text Input to the "Name" field and the "Add" button as a submit like we did for the repeater.
+   * Bind the Text Input to the "Name" field and the "Add" button as a submit like we did for the repeater. You can navigate back to "Member Dashboard" on success.
 
    ![input bind](assets/input_bind.png)
    ![add bind](assets/add_bind.png)
 
-   * Now we need to connect the "New" button to open the lightbox. For that we'll write some code. Go to the page code editor and paste this code **instead** of the current content (Make sure to change the IDs to match your site)
+   * Now we need to connect the "New" button to open the lightbox. For that we'll write some code. Go to the page code editor and paste this code **instead** of the current content (Make sure you are editing the code for Member Dashboard and that you change the IDs to match your site and lightbox name)
 
     ```js
     import wixWindow from 'wix-window';
